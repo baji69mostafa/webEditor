@@ -44,7 +44,7 @@ let handler = async (m, {
 }
 handler.help = ["carbon"]
 handler.tags = ["logo"]
-handler.command = /^carbon?$/i
+handler.command = ['كربون']
 export default handler
 
 const config = {
