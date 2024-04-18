@@ -1547,7 +1547,7 @@ global.dfail = (type, m, conn) => {
         restrict: '*『 الميزه دي المطور لغيها ! 』*'
     }[type]
 const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] Warning*', body: '〘𝐶𝛩𝑁𝐴𝑁╎👑╎𝐵𝛩𝑇〙', thumbnail: imagen1, sourceUrl: 'https://whatsapp.com/channel/0029VaU3KnKGehELDhZMcf3d'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] تحذير*', body: '〘𝐶𝛩𝑁𝐴𝑁╎👑╎𝐵𝛩𝑇〙', thumbnail: imagen1, sourceUrl: 'https://whatsapp.com/channel/0029VaU3KnKGehELDhZMcf3d'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 const file = global.__filename(import.meta.url, true);
