@@ -11,5 +11,5 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
   }
 handler.help = ['semoji']
 handler.tags = ['sticker'] 
-handler.command = /^(semoji)$/i
+handler.command = ['ايموجي']
 export default handler
