@@ -64,10 +64,8 @@ let handler = async (m, {
 handler.help = ['snapchat']
 handler.tags = ['downloader']
 handler.command = ['سناب-شات','سناب']
-export default handler
+module.exports = handler;
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                module.exports = handler;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
 async function getSnapchatVideo(url) {
     const response = await fetch(url);
