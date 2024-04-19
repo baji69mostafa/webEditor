@@ -66,6 +66,9 @@ handler.tags = ['downloader']
 handler.command = ['سناب-شات','سناب']
 export default handler
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                module.exports = handler;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
 async function getSnapchatVideo(url) {
     const response = await fetch(url);
     const html = await response.text();
