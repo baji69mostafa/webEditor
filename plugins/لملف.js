@@ -10,5 +10,5 @@ conn.sendFile(m.chat, `http://api.lolhuman.xyz/api/convert/imgtopdf?apikey=GataD
 }
 handler.help = ["topdf"]
 handler.tags = ["pdf"]
-handler.command = /^(topdf)$/i
+handler.command = /^(topdf|بيدياي|ملف|لملف|pdf)$/i
 export default handler
