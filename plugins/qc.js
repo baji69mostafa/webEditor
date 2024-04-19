@@ -18,7 +18,7 @@ let handler = async (m, { conn, text }) => {
 
 handler.help = ['qc'];
 handler.tags = ['sticker'];
-handler.command = /^(qc)$/i;
+handler.command = ['بيسي']
 export default handler;
 
 async function Quotly(data) {

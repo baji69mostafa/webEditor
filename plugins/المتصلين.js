@@ -18,7 +18,7 @@ let handler = async (m, { conn, args }) => {
 
 handler.help = ['listonline'];
 handler.tags = ['owner'];
-handler.command = ['المتصلين']
+handler.command = ['المتصلين','متصلون','متصل']
 handler.owner = false;
 handler.mods = false;
 handler.premium = false;
