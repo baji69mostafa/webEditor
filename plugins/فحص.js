@@ -3,7 +3,7 @@ import axios from 'axios'
 let handler = async (m, { 
 conn, text, command, usedPrefix
 }) => {
-if (!text) return m.reply(`هذا الامر يحول لك ان تلتقط سكرين شوت لاي موقع فقط اكتب الامر ثم ضع امامه رابطه وشاهد النتيجة سوف اعطيك مثال حتى تفهم\n\n*مثال :* \n${usedPrefix + command} https://www.facebook.com`)
+if (!text) return m.reply(`هذا الامر يخول لك ان تلتقط سكرين شوت لاي موقع فقط اكتب الامر ثم ضع امامه رابطه وشاهد النتيجة سوف اعطيك مثال حتى تفهم\n\n*مثال :* \n${usedPrefix + command} https://www.facebook.com`)
 m.reply(wait)
 var phone = await ssweb(text, 'phone')
 var desktop = await ssweb(text, 'desktop')
@@ -21,7 +21,7 @@ await conn.sendFile(m.chat, desktop.result, '',res, m, false)
 }
 handler.help = ['ssweb']
 handler.tags = ['tools']
-handler.command = /^استكشف|اكتشف|فحص|افحص$/i
+handler.command = /^(فحص|افحص|استكشف|اكتشف)$/i
 
 handler.limit = false
 
