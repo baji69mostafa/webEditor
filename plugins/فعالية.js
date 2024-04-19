@@ -30,6 +30,6 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 }
 handler.help = ['guessflag']
 handler.tags = ['game']
-handler.command = /^فعاليه/i
+handler.command = /^فعاليه$/i
 
 export default handler 

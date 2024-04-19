@@ -21,7 +21,7 @@ await conn.sendFile(m.chat, desktop.result, '',res, m, false)
 }
 handler.help = ['ssweb']
 handler.tags = ['tools']
-handler.command = ['استكشف','اكتشف','فحص','افحص']
+handler.command = /^استكشف|اكتشف|فحص|افحص$/i
 
 handler.limit = false
 
