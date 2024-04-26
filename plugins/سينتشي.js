@@ -1,6 +1,6 @@
 import axios from "axios"
 let handler = async (m, {command, conn, usedPrefix}) => {
-let res = (await axios.get(`https://gist.github.com/maykel2007/fbe89d1709586bbea5651b2ea09386b1.js`)).data  
+let res = (await axios.get(`https://telegra.ph/file/8b025504e190403ef0e3c.jpg`)).data  
 let haha = await res[Math.floor(res.length * Math.random())]    
 conn.sendFile(m.chat, haha, 'error.jpg', `
 ◉═══ • ❁ 👑 ❁ • ═══◉
