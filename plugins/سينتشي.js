@@ -1,6 +1,6 @@
 import axios from "axios"
 let handler = async (m, {command, conn, usedPrefix}) => {
-let res = (await axios.get(`https://raw.githubusercontent.com/socona12/TheMystic-Bot-MD/master/src/JSON/anime-Venom.json`)).data  
+let res = (await axios.get(`https://gist.github.com/maykel2007/fbe89d1709586bbea5651b2ea09386b1.js`)).data  
 let haha = await res[Math.floor(res.length * Math.random())]    
 conn.sendFile(m.chat, haha, 'error.jpg', `
 ◉═══ • ❁ 👑 ❁ • ═══◉
