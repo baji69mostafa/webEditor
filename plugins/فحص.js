@@ -12,16 +12,16 @@ var res = ``
 if (command === 'sshp') {
 await conn.sendFile(m.chat, phone.result, '',res, m, false)
 }
-if (command === 'ssweb' || command === 'sstablet') {
+if (command === 'فحص' || command === 'sstablet') {
 await conn.sendFile(m.chat, tablet.result, '',res, m, false)
 }
 if (command === 'sspc') {
 await conn.sendFile(m.chat, desktop.result, '',res, m, false)
 }
 }
-handler.help = ['ssweb']
+handler.help = ['فحص']
 handler.tags = ['tools']
-handler.command = /^(ssweb)$/i
+handler.command = /^(فحص)$/i
 
 handler.limit = false
 
