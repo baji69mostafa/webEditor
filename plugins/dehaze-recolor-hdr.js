@@ -3,13 +3,13 @@ import Jimp from "jimp";
 
 let handler = async (m, { conn, usedPrefix, command }) => {
 	switch (command) {
-		case "dehaze":
+		case "توهج":
 			{
 				conn.enhancer = conn.enhancer ? conn.enhancer : {};
 				let q = m.quoted ? m.quoted : m;
 				let mime = (q.msg || q).mimetype || q.mediaType || "";
 				if (!mime)
-					throw `ارسل للبوت اي صورة وسوف يقوم  بإضافة لمسة يجعلها جميلة وجذابة\n\nارسل الصورة تم أشر اليها واكتب \n*.dehaze*`;
+					throw `ارسل للبوت اي صورة وسوف يقوم  بإضافة لمسة يجعلها جميلة وجذابة\n\nارسل الصورة تم أشر اليها واكتب \n*.توهج*`;
 				if (!/image\/(jpe?g|png)/.test(mime))
 					throw `Mime ${mime} not support`;
 				else conn.enhancer[m.sender] = true;
@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let img = await q.download?.();
 				let error;
 				try {
-					const This = await processing(img, "dehaze");
+					const This = await processing(img, "توهج");
 					conn.sendFile(m.chat, This, "", " instagram.com/noureddine_ouafy ...", m);
 				} catch (er) {
 					error = true;
@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 };
 handler.help = ["dehaze","recolor","hdr"];
 handler.tags = ["image-edit"];
-handler.command = ["dehaze","قديم","جودة"];
+handler.command = ["توهج","قديم","جودة"];
 export default handler;
 
 async function processing(urlPath, method) {
