@@ -8,7 +8,7 @@ let handler = async (m, {
     text,
     command
 }) => {
-if (!text) return m.reply("ميزة الذكاء الاصطناعي \nExample:\n .dx ما هي عاصمة المغرب")
+if (!text) return m.reply("ميزة الذكاء الاصطناعي \n*مثال:*\n .شات ما هية الجافا سكربت")
 await m.reply(wait)
 try {
 // Contoh penggunaan
@@ -20,7 +20,7 @@ await m.reply('وقعت مشكلة :(')
 }
 handler.help = ["dx"]
 handler.tags = ["ai"]
-handler.command = /^(dx)$/i
+handler.command = /^(شات)$/i
 export default handler
 
 /* New Line */
