@@ -55,7 +55,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				}
 			}
 			break;
-		case "جودة","جوده":
+		case "جودة":
 			{
 				conn.hdr = conn.hdr ? conn.hdr : {};
 				let q = m.quoted ? m.quoted : m;
@@ -69,7 +69,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let img = await q.download?.();
 				let error;
 				try {
-					const This = await processing(img, "جوده","جوده");
+					const This = await processing(img, "جوده");
 					conn.sendFile(m.chat, This, "", "*تم تحسين من جودة  الصورة*", m);
 				} catch (er) {
 					error = true;
@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 };
 handler.help = ["dehaze","recolor","hdr"];
 handler.tags = ["image-edit"];
-handler.command = ["dehaze","recolor","جودة","جوده"];
+handler.command = ["dehaze","recolor","جودة"];
 export default handler;
 
 async function processing(urlPath, method) {
