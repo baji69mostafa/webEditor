@@ -69,7 +69,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let img = await q.download?.();
 				let error;
 				try {
-					const This = await processing(img, "enhance");
+					const This = await processing(img, "جوده","جوده");
 					conn.sendFile(m.chat, This, "", "*تم تحسين من جودة  الصورة*", m);
 				} catch (er) {
 					error = true;
@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 };
 handler.help = ["dehaze","recolor","hdr"];
 handler.tags = ["image-edit"];
-handler.command = ["dehaze","recolor","جوده","جودة"];
+handler.command = ["dehaze","recolor","جودة","جوده"];
 export default handler;
 
 async function processing(urlPath, method) {
