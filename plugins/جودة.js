@@ -3,13 +3,13 @@ import Jimp from "jimp";
 
 let handler = async (m, { conn, usedPrefix, command }) => {
 	switch (command) {
-		case "توهج":
+		case "dehaze":
 			{
 				conn.enhancer = conn.enhancer ? conn.enhancer : {};
 				let q = m.quoted ? m.quoted : m;
 				let mime = (q.msg || q).mimetype || q.mediaType || "";
 				if (!mime)
-					throw `ارسل للبوت اي صورة وسوف يقوم  بإضافة لمسة يجعلها جميلة وجذابة\n\nارسل الصورة تم أشر اليها واكتب \n*.توهج*`;
+					throw `ارسل للبوت اي صورة وسوف يقوم  بإضافة لمسة يجعلها جميلة وجذابة\n\nارسل الصورة تم أشر اليها واكتب \n*.dehaze*`;
 				if (!/image\/(jpe?g|png)/.test(mime))
 					throw `Mime ${mime} not support`;
 				else conn.enhancer[m.sender] = true;
@@ -17,8 +17,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let img = await q.download?.();
 				let error;
 				try {
-					const This = await processing(img, "توهج");
-					conn.sendFile(m.chat, This, "", " instagram.com/noureddine_ouafy ...", m);
+					const This = await processing(img, "dehaze");
+					conn.sendFile(m.chat, This, "","*تمت إضافة توهج للصورة*", m);
 				} catch (er) {
 					error = true;
 				} finally {
