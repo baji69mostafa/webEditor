@@ -8,7 +8,7 @@ let url = await uploadImage(img)
 let docname = text ? text : m.pushName || 'Bobiza'
 conn.sendFile(m.chat, `http://api.lolhuman.xyz/api/convert/imgtopdf?apikey=GataDios&img=${url}`, docname + '.لملف', '', m, false, { asDocument: true })
 }
-handler.help = ["لملف"]
-handler.tags = ["ملف"]
-handler.command = /^(لملف)$/i
+handler.help = ["topdf"]
+handler.tags = ["pdf"]
+handler.command = /^(topdf)$/i
 export default handler
