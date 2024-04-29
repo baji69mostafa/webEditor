@@ -549,10 +549,10 @@ setInterval(async () => {
   await conn.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
-  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
+  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000) % 365;
   const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
   const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 10) % 6;
+  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
   return [d, ' يوم ️', h, ' ساعه ', m, ' دقيقه ', s, ' ثانيه '].map((v) => v.toString().padStart(2, 0)).join('');
 }
 _quickTest().catch(console.error);
