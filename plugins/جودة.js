@@ -29,13 +29,13 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				}
 			}
 			break;
-		case "recolor":
+		case "قديمة":
 			{
 				conn.recolor = conn.recolor ? conn.recolor : {};
 				let q = m.quoted ? m.quoted : m;
 				let mime = (q.msg || q).mimetype || q.mediaType || "";
 				if (!mime)
-					throw `ارسل للبوت اي صورة وسوف يقوم بالتلاعب وتغيير بعض الالوان في الصورة\n\nارسل الصورة تم أشر اليها واكتب \n*.قديم*`;
+					throw `ارسل للبوت اي صورة وسوف يقوم بالتلاعب وتغيير بعض الالوان في الصورة\n\nارسل الصورة تم أشر اليها واكتب \n*.قديمة*`;
 				if (!/image\/(jpe?g|png)/.test(mime))
 					throw `Mime ${mime} tidak support`;
 				else conn.recolor[m.sender] = true;
@@ -43,7 +43,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let img = await q.download?.();
 				let error;
 				try {
-					const This = await processing(img, "recolor");
+					const This = await processing(img, "قديمة");
 					conn.sendFile(m.chat, This, "", "*تم جعل الصورة قديمة*", m);
 				} catch (er) {
 					error = true;
