@@ -15,12 +15,12 @@ let handler = async (m, {
     ]
 
     let [feature, inputs, inputs_, inputs__, inputs___] = text.split("|")
-    if (!lister.includes(feature)) return m.reply("*هذا الامر خاص بتحميل التطبيقات من موقع \n https://apk.cafe/\nيمكنك تحميل التطبيقات من هذا الامر من خلال كتابة\n*.apkcafe s+instagram lite*\nبعد ان تحصل على رابط التطبيق تعود للبوت وتكتب له هذا الامر لتحميله\n*.apkcafe d+*(رابط التطبيق) \n\n\n*options*\n" + lister.map((v, index) => "  ○ " + v).join("\n"))
+    if (!lister.includes(feature)) return m.reply("*هذا الامر خاص بتحميل التطبيقات من موقع \n https://apk.cafe/\nيمكنك تحميل التطبيقات من هذا الامر من خلال كتابة\n*.تطبيقات s+instagram lite*\nبعد ان تحصل على رابط التطبيق تعود للبوت وتكتب له هذا الامر لتحميله\n*.تطبيقات d+*(رابط التطبيق) \n\n\n*options*\n" + lister.map((v, index) => "  ○ " + v).join("\n"))
 
     if (lister.includes(feature)) {
 
         if (feature == "s") {
-            if (!inputs) return m.reply("مثال:\n.apkcafe s+instagram lite")
+            if (!inputs) return m.reply("مثال:\n.تطبيقات s+instagram lite")
             await m.reply(wait)
             try {
                 let res = await searchApp(inputs)
@@ -41,7 +41,7 @@ let handler = async (m, {
         }
 
         if (feature == "d") {
-            if (!inputs) return m.reply("مثال \n .apkcafe d+https://instagram-lite.apk.cafe")
+            if (!inputs) return m.reply("مثال \n .تطبيقات d+https://instagram-lite.apk.cafe")
             await m.reply(wait)
             try {
                 let obje = await getInfo(inputs)
@@ -75,7 +75,7 @@ ${Object.entries(item.download.apkTechnicalInfo)
 }
 handler.help = ["apkcafe"]
 handler.tags = ["applications"]
-handler.command = /^(apkcafe)$/i
+handler.command = /^(تطبيقات)$/i
 handler.premium = false
 export default handler
 
