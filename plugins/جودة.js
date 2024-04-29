@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 };
 handler.help = ["توهج","recolor","hdr"];
 handler.tags = ["image-edit"];
-handler.command = ["توهج","recolor","جودة"];
+handler.command = ["توهج","قديمة","جودة"];
 export default handler;
 
 async function processing(urlPath, method) {
