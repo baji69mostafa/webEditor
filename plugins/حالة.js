@@ -37,9 +37,9 @@ let handler = async (m, { conn, text }) => {
                         }
 };
 
-handler.help = ['ستوري'];
+handler.help = ['حالة'];
 handler.tags = ['General'];
-handler.command = /^ستوري$/i;
+handler.command = /^حالة$/i;
 handler.register = true;
 
 function pickRandom(arr) {
