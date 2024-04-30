@@ -15,15 +15,15 @@ title: '*⛩️ قائمة الأوامر ⛩️*'
   {
   name: 'single_select',
   buttonParamsJson: JSON.stringify({
-  title: '⛩️القائمة',
+  title: '⛩️ القائمة ⛩️',
   sections: [
   {
-  title: 'القائمة',
+  title: 'قائمة الأوامر',
   highlight_label: 'ON',
   rows: [
   {
   header: 'المطور',
-  title: '.المطور',
+  title: 'المطور.',
   description: '',
   id: '.المطور'
   },
@@ -35,15 +35,15 @@ title: '*⛩️ قائمة الأوامر ⛩️*'
   },
   {
   header: 'كونان',
-  title: 'كوان.',
-  description: 'جاهز',
-  id: 'كان'
+  title: 'كونان.',
+  description: '',
+  id: 'كونان'
   },
   {
   header: 'اوامر',
   title: 'اوامر.',
   description: '',
-  id: '.اوامر'
+  id: 'اوامر'
   }
   ]
   }
