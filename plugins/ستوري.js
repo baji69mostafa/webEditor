@@ -31,7 +31,7 @@ let handler = async (m, { conn, text }) => {
     }
 handler.help = ['subirestado']
 handler.tags = ['General']
-handler.command = /^باب$/i
+handler.command = /^ستوري$/i
 handler.register = false
 export default handler
 
