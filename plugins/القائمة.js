@@ -23,25 +23,25 @@ title: '*⛩️ قائمة الأوامر ⛩️*'
   rows: [
   {
   header: 'المطور',
-  title: 'المطور.',
+  title: '.المطور',
   description: '',
   id: '.المطور'
   },
   {
   header: 'السورس',
-  title: 'السورس.',
+  title: '.السورس',
   description: '',
   id: '.السورس'
   },
   {
   header: 'كونان',
-  title: 'كونان.',
+  title: '.كونان',
   description: '',
   id: 'كونان'
   },
   {
   header: 'اوامر',
-  title: 'اوامر.',
+  title: '.اوامر',
   description: '',
   id: 'اوامر'
   }
